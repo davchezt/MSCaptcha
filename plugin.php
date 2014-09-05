@@ -24,13 +24,13 @@ class ETPlugin_MSCaptcha extends ETPlugin {
 	
 	public function handler_init($sender)
 	{
-		$sender->addCSSFile($this->resource("mscaptcha.css"));
-		$sender->addJSFile($this->resource("mscaptcha.js"));
+		$sender->addCSSFile($this->Resource("mscaptcha.css"));
+		$sender->addJSFile($this->Resource("mscaptcha.js"));
 	}
 
 	public function handler_userController_initJoin($controller, $form)
 	{
-		$form->addSection("mscaptcha", T("Slove this"));
+		$form->addSection("mscaptcha", T("Solve this"));
 
 		$form->addField("mscaptcha", "mscaptcha", function($form)
 		{
