@@ -27,7 +27,7 @@ Class MSCaptchaController extends ETController {
 		
 		// Get the code		
 		$c = $a + $b;
-		// Genrate session of code
+		// Store session code
 		ET::$session->store('mscaptcha', $c);
 		
 		$arr = array($a, '+', $b, '=', '?');
